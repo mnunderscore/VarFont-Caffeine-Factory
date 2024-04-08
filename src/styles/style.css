@@ -1,0 +1,33 @@
+@font-face {
+	font-family: "Blinker";
+	src: url("Blinker.ttf") format("truetype");
+}
+
+body {
+    font-family: "Blinker", sans-serif;
+    font-size: 40px;
+    font-weight: 400;
+}
+
+h2{
+    font-size: 48px;
+    font-weight: 600;
+}
+
+h2:not(:first-of-type) {
+    margin-top: 125px;
+}
+
+p {
+    margin-bottom:0;
+}
+
+.myTextMouse {
+    font-variation-settings: "wght" 400, "wdth" 100;
+}
+.myTextScroll {
+    font-variation-settings: "wght" 400, "wdth" 100;
+}
+.myTextSlider {
+    font-variation-settings: "wght" 100, "wdth" 100;
+}
