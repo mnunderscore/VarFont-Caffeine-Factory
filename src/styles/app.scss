@@ -6,8 +6,8 @@ body {
     font-family: "Grenze Gotisch", sans-serif;
     font-size: $font-size;
     font-weight: 100;
-    background-color: rgb(7, 7, 7);
-    color: aliceblue;
+    background-color: #404040;
+    color: #E6E6E6;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -27,16 +27,23 @@ body {
         line-height: 1.5;
 
         .y-gradient {
-            font-weight: 400;
             background: linear-gradient(90deg, rgb(255, 251, 0), rgb(255, 174, 0));
             background-clip: text;
             -webkit-background-clip: text;
             color: transparent;
         }
+
+        .red {
+            color: #FF7474;
+        }
+
+        .indigo {
+            color: #6574CD;
+        }
     }
 
     span {
-        white-space: wrap;
+        white-space: pre-line;
     }
 }
 
