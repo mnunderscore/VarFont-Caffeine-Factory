@@ -5,8 +5,8 @@ import Splitting from "splitting";
 window.addEventListener("DOMContentLoaded", () => {
 	function updateText(e) {
 		myTextMouse = document.querySelectorAll(".move-on-mouse");
-		let multiplierWidth = e.offsetX / window.innerWidth;
-		let multiplierHeight = e.offsetY / window.innerHeight;
+		let multiplierWidth = e.pageX / document.body.clientWidth;
+		let multiplierHeight = e.pageY / document.body.clientHeight;
 		let randomWeight = multiplierWidth * (1000 - 35) + 35;
 		let randomWidth = multiplierHeight * (1000 - 100) + 100;
 		myTextMouse.forEach((element) => element.style.fontVariationSettings = "\"wght\" " + randomWeight + ", \"wdth\" " + randomWidth)

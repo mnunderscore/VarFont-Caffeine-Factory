@@ -1,11 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Sixtyfour:BLED,SCAN@0..100,-53..100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Grenze+Gotisch:wght@100..900&family=Sixtyfour:BLED,SCAN@0..100,-53..100&display=swap');
+
+$font-size: 30px;
 
 body {
-    font-family: "Orbitron", sans-serif;
-    font-size: 40px;
-    font-weight: 400;
+    font-family: "Grenze Gotisch", sans-serif;
+    font-size: $font-size;
+    font-weight: 100;
     background-color: rgb(7, 7, 7);
     color: aliceblue;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding:25px;
 }
 
 h2{
@@ -20,6 +26,15 @@ h2:not(:first-of-type) {
 p {
     margin:0;
     white-space: pre-line;
+    line-height: 1.5;
+
+    .y-gradient {
+        font-weight: 400;
+        background: linear-gradient(90deg, rgb(255, 251, 0), rgb(255, 174, 0));
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+    }
 }
 
 .move-on-mouse {
@@ -28,7 +43,7 @@ p {
 
 .more-and-more{
     font-family: 'Sixtyfour', sans-serif;
-    font-size: 36px;
+    font-size: $font-size - 3px;
     font-weight: 400;
     font-variation-settings: "SCAN" -50, "BLED" 0;
 
@@ -62,7 +77,6 @@ p {
     animation-duration: 5s;
     animation-timing-function: ease;
     margin: 0 auto;
-    line-height: 1;
     font-weight: normal;
 
     :nth-child(2) {
@@ -96,7 +110,6 @@ p {
 
 .breathe {
 	font-weight: 100;
-	font-size: 40px;
 	font-variation-settings: 'wght' 100, 'wdth' 85;
 
     .char {
@@ -109,14 +122,11 @@ p {
 @keyframes breathe {
 	0% {
 		font-variation-settings: 'wght' 100, 'wdth' 85;
-		font-size: 40px;
 	}
 	60% {
-		font-variation-settings: 'wght' 700, 'wdth' 100;
-		font-size: 50px;
+		font-variation-settings: 'wght' 900, 'wdth' 100;
 	}
 	100% {
 		font-variation-settings: 'wght' 100, 'wdth' 85;
-		font-size: 40px;
 	}
 }
