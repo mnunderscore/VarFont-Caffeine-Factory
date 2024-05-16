@@ -2,8 +2,6 @@ import "splitting/dist/splitting.css";
 import "splitting/dist/splitting-cells.css";
 import Splitting from "splitting";
 
-Splitting();
-
 window.addEventListener("DOMContentLoaded", () => {
 	function updateText(e) {
 		myTextMouse = document.querySelectorAll(".move-on-mouse");
@@ -18,4 +16,6 @@ window.addEventListener("DOMContentLoaded", () => {
     if (!myTextMouse) return;
 
 	window.addEventListener("mousemove", updateText);
+	
+	Splitting();
 });
