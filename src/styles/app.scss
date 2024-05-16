@@ -1,11 +1,7 @@
-@font-face {
-	font-family: "Blinker";
-	src: url("../assets/Blinker.ttf") format("truetype");
-}
-@import url('https://fonts.googleapis.com/css2?family=Sixtyfour&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Sixtyfour:BLED,SCAN@0..100,-53..100&display=swap');
+
 body {
-    font-family: "Blinker", sans-serif;
+    font-family: "Orbitron", sans-serif;
     font-size: 40px;
     font-weight: 400;
     background-color: rgb(7, 7, 7);
@@ -23,12 +19,44 @@ h2:not(:first-of-type) {
 
 p {
     margin:0;
+    white-space: pre-line;
 }
 
 .move-on-mouse {
     font-variation-settings: "wght" 400, "wdth" 100;
 }
 
+.more-and-more{
+    font-family: 'Sixtyfour', sans-serif;
+    font-size: 36px;
+    font-weight: 400;
+    font-variation-settings: "SCAN" -50, "BLED" 0;
+
+    & p:nth-child(2) {
+        font-variation-settings: "SCAN" -40;
+    }
+    & p:nth-child(3) {
+        font-variation-settings: "SCAN" -30;
+    }
+    & p:nth-child(4) {
+        font-variation-settings: "SCAN" -20;
+    }
+    & p:nth-child(5) {
+        font-variation-settings: "SCAN" -10;
+    }
+    & p:nth-child(6) {
+        font-variation-settings: "SCAN" 0;
+    }
+    & p:nth-child(7) {
+        font-variation-settings: "SCAN" 10;
+    }
+    & p:nth-child(8) {
+        font-variation-settings: "SCAN" 20;
+    }
+    & p:nth-child(9) {
+        font-variation-settings: "SCAN" 30;
+    }
+}
 .wacky{
     animation:  wacky infinite;
     animation-duration: 5s;
@@ -40,7 +68,7 @@ p {
     :nth-child(2) {
     animation-delay: .1s
     }
-  
+
     :nth-child(3) {
     animation-delay: .2s
     }
@@ -92,27 +120,3 @@ p {
 		font-size: 40px;
 	}
 }
-
-// <uniquifier>: Use a unique and descriptive class name
-// <bleed>: Use a value from 0 to 100
-// <scanlines>: Use a value from -53 to 100
-
-// .sixtyfour-<uniquifier> {
-//     font-family: "Sixtyfour", sans-serif;
-//     font-optical-sizing: auto;
-//     font-weight: 400;
-//     font-style: normal;
-//     font-variation-settings:
-//       "BLED" <bleed>,
-//       "SCAN" <scanlines>;
-//   }
-
-  // <uniquifier>: Use a unique and descriptive class name
-// <weight>: Use a value from 400 to 900
-
-// .orbitron-<uniquifier> {
-//     font-family: "Orbitron", sans-serif;
-//     font-optical-sizing: auto;
-//     font-weight: <weight>;
-//     font-style: normal;
-//   }
