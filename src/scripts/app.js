@@ -30,7 +30,7 @@ window.addEventListener("DOMContentLoaded", () => {
 		crush[i].style.fontVariationSettings = '"wght" 800';
 		i++;
 		if (i == crush.length) i = 0;
-	}, 500);
+	}, 400);
 });
 
 
