@@ -31,7 +31,7 @@ p {
 
 .wacky{
     animation:  wacky infinite;
-    animation-duration: 5s;
+    animation-duration: 3s;
     animation-timing-function: ease;
     margin: 0 auto;
     line-height: 1;
@@ -91,6 +91,24 @@ p {
 		font-variation-settings: 'wght' 100, 'wdth' 85;
 		font-size: 40px;
 	}
+}
+
+
+.crush{
+	letter-spacing: 5px;
+	font-variation-settings: "wght" 200;
+	transition: all 200ms ease-in-out;
+
+    &__base{
+        font-family: "Orbitron", sans-serif;
+    }
+    &__neon{
+        font-family: "Sixtyfour", sans-serif;
+        font-size: 30px;
+    }
+
+
+
 }
 
 // <uniquifier>: Use a unique and descriptive class name

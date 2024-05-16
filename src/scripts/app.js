@@ -18,4 +18,19 @@ window.addEventListener("DOMContentLoaded", () => {
 	window.addEventListener("mousemove", updateText);
 	
 	Splitting();
+
+	const crush = document.querySelectorAll(".crush");
+	let i = 0;
+	setInterval(function() {
+		crush.forEach(cru => {
+			cru.style.fontVariationSettings = '"wght" 300';
+			cru.style.opacity = "0.5";
+		});
+		crush[i].style.opacity = "1";
+		crush[i].style.fontVariationSettings = '"wght" 800';
+		i++;
+		if (i == crush.length) i = 0;
+	}, 500);
 });
+
+
