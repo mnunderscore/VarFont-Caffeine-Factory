@@ -1,10 +1,7 @@
-@font-face {
-	font-family: "Blinker";
-	src: url("../assets/Blinker.ttf") format("truetype");
-}
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Sixtyfour:BLED,SCAN@0..100,-53..100&display=swap');
 
 body {
-    font-family: "Blinker", sans-serif;
+    font-family: "Orbitron", sans-serif;
     font-size: 40px;
     font-weight: 400;
 }
@@ -20,8 +17,41 @@ h2:not(:first-of-type) {
 
 p {
     margin:0;
+    white-space: pre-line;
 }
 
 .move-on-mouse {
     font-variation-settings: "wght" 400, "wdth" 100;
+}
+
+.more-and-more {
+    font-family: 'Sixtyfour', sans-serif;
+    font-size: 36px;
+    font-weight: 400;
+    font-variation-settings: "SCAN" -50, "BLED" 0;
+
+    &:nth-of-type(4) {
+        font-variation-settings: "SCAN" -40;
+    }
+    &:nth-of-type(5) {
+        font-variation-settings: "SCAN" -30;
+    }
+    &:nth-of-type(6) {
+        font-variation-settings: "SCAN" -20;
+    }
+    &:nth-of-type(7) {
+        font-variation-settings: "SCAN" -10;
+    }
+    &:nth-of-type(8) {
+        font-variation-settings: "SCAN" 0;
+    }
+    &:nth-of-type(9) {
+        font-variation-settings: "SCAN" 10;
+    }
+    &:nth-of-type(10) {
+        font-variation-settings: "SCAN" 20;
+    }
+    &:nth-of-type(11) {
+        font-variation-settings: "SCAN" 30;
+    }
 }
