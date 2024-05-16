@@ -1,75 +1,92 @@
-@font-face {
-	font-family: "Blinker";
-	src: url("../assets/Blinker.ttf") format("truetype");
-}
-@import url('https://fonts.googleapis.com/css2?family=Sixtyfour&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Grenze+Gotisch:wght@100..900&family=Orbitron:wght@400..900&family=Sixtyfour:BLED,SCAN@0..100,-53..100&display=swap");
+
+$font-size: 25px;
+
 body {
-    font-family: "Blinker", sans-serif;
-    font-size: 40px;
-    font-weight: 400;
+    font-family: "Grenze Gotisch", sans-serif;
+    font-size: $font-size;
+    font-weight: 100;
     background-color: rgb(7, 7, 7);
     color: aliceblue;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 25px;
+    h2 {
+        font-size: 48px;
+        font-weight: 600;
+    }
+
+    h2:not(:first-of-type) {
+        margin-top: 125px;
+    }
+
+    p {
+        margin: 0;
+        white-space: pre-line;
+        line-height: 1.5;
+
+        .y-gradient {
+            font-weight: 400;
+            background: linear-gradient(90deg, rgb(255, 251, 0), rgb(255, 174, 0));
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+    }
+
+    span {
+        white-space: wrap;
+    }
 }
 
-h2{
-    font-size: 48px;
-    font-weight: 600;
+.left-column {
+    width: 40%;
 }
 
-h2:not(:first-of-type) {
-    margin-top: 125px;
-}
-
-p {
-    margin:0;
+.right-column {
+    width: 40%;
 }
 
 .move-on-mouse {
-    font-variation-settings: "wght" 400, "wdth" 100;
+    font-variation-settings:
+        "wght" 400,
+        "wdth" 100;
 }
 
-.wacky{
-    animation:  wacky infinite;
+.wacky {
+    animation: wacky infinite;
     animation-duration: 3s;
     animation-timing-function: ease;
     margin: 0 auto;
-    line-height: 1;
     font-weight: normal;
 
     :nth-child(2) {
-    animation-delay: .1s
+        animation-delay: 0.1s;
     }
-  
+
     :nth-child(3) {
-    animation-delay: .2s
+        animation-delay: 0.2s;
     }
 
     :nth-child(4) {
-    animation-delay: .3s
+        animation-delay: 0.3s;
     }
 
     :nth-child(5) {
-    animation-delay: .4s
+        animation-delay: 0.4s;
     }
 
     :nth-child(6) {
-    animation-delay: .5s
+        animation-delay: 0.5s;
     }
 }
 
-@keyframes wacky  {
-    0%   {font-variation-settings: "wght" 100, "wdth" 50 ; }
-    25%   {font-variation-settings: "wght" 100, "wdth" 200; }
-    50%   {font-variation-settings: "wght" 900, "wdth" 200; }
-    75%   {font-variation-settings: "wght" 900, "wdth" 50;  }
-    100% {font-variation-settings: "wght" 100, "wdth" 50 ;}
-}
-
 .breathe {
-	font-weight: 100;
-	font-size: 40px;
-	font-variation-settings: 'wght' 100, 'wdth' 85;
+    font-weight: 100;
+    font-variation-settings:
+        "wght" 100,
+        "wdth" 85;
 
     .char {
         --delay: calc((var(--char-index) + 1) * 400ms);
@@ -78,59 +95,63 @@ p {
     }
 }
 
-@keyframes breathe {
-	0% {
-		font-variation-settings: 'wght' 100, 'wdth' 85;
-		font-size: 40px;
-	}
-	60% {
-		font-variation-settings: 'wght' 700, 'wdth' 100;
-		font-size: 50px;
-	}
-	100% {
-		font-variation-settings: 'wght' 100, 'wdth' 85;
-		font-size: 40px;
-	}
-}
+.crush {
+    letter-spacing: 5px;
+    font-variation-settings: "wght" 200;
+    transition: all 200ms ease-in-out;
 
-
-.crush{
-	letter-spacing: 5px;
-	font-variation-settings: "wght" 200;
-	transition: all 200ms ease-in-out;
-
-    &__base{
+    &__base {
         font-family: "Orbitron", sans-serif;
+        font-size: $font-size - 5px;
     }
-    &__neon{
+    &__neon {
         font-family: "Sixtyfour", sans-serif;
-        font-size: 30px;
+        font-size: $font-size - 5px;
     }
-
-
-
 }
 
-// <uniquifier>: Use a unique and descriptive class name
-// <bleed>: Use a value from 0 to 100
-// <scanlines>: Use a value from -53 to 100
+@keyframes wacky {
+    0% {
+        font-variation-settings:
+            "wght" 100,
+            "wdth" 50;
+    }
+    25% {
+        font-variation-settings:
+            "wght" 100,
+            "wdth" 200;
+    }
+    50% {
+        font-variation-settings:
+            "wght" 900,
+            "wdth" 200;
+    }
+    75% {
+        font-variation-settings:
+            "wght" 900,
+            "wdth" 50;
+    }
+    100% {
+        font-variation-settings:
+            "wght" 100,
+            "wdth" 50;
+    }
+}
 
-// .sixtyfour-<uniquifier> {
-//     font-family: "Sixtyfour", sans-serif;
-//     font-optical-sizing: auto;
-//     font-weight: 400;
-//     font-style: normal;
-//     font-variation-settings:
-//       "BLED" <bleed>,
-//       "SCAN" <scanlines>;
-//   }
-
-  // <uniquifier>: Use a unique and descriptive class name
-// <weight>: Use a value from 400 to 900
-
-// .orbitron-<uniquifier> {
-//     font-family: "Orbitron", sans-serif;
-//     font-optical-sizing: auto;
-//     font-weight: <weight>;
-//     font-style: normal;
-//   }
+@keyframes breathe {
+    0% {
+        font-variation-settings:
+            "wght" 100,
+            "wdth" 85;
+    }
+    60% {
+        font-variation-settings:
+            "wght" 900,
+            "wdth" 100;
+    }
+    100% {
+        font-variation-settings:
+            "wght" 100,
+            "wdth" 85;
+    }
+}
