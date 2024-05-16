@@ -30,6 +30,7 @@
   },
   "dependencies": {
     "gsap": "^3.12.5",
-    "jquery": "^3.7.1"
+    "jquery": "^3.7.1",
+    "splitting": "^1.0.6"
   }
 }
