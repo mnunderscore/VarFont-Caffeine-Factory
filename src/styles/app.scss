@@ -1,17 +1,30 @@
-@import url("https://fonts.googleapis.com/css2?family=Grenze+Gotisch:wght@100..900&family=Orbitron:wght@400..900&family=Sixtyfour:BLED,SCAN@0..100,-53..100&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Workbench:BLED,SCAN@0..100,-53..100&display=swap");
 
 $font-size: 25px;
 
 body {
-    font-family: "Grenze Gotisch", sans-serif;
+    font-family: "Josefin Sans", sans-serif;
     font-size: $font-size;
-    font-weight: 100;
+    font-weight: 400;
     background-color: #404040;
-    color: #E6E6E6;
+    color: #e6e6e6;
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     padding: 25px;
+
+    .content {
+        text-align: left;
+        width: 55%;
+    }
+
+    h1{
+        font-size: 72px;
+        font-weight: 600;
+        white-space: pre-line;
+    }
+
     h2 {
         font-size: 48px;
         font-weight: 600;
@@ -20,6 +33,12 @@ body {
 
     h2:not(:first-of-type) {
         margin-top: 125px;
+    }
+
+    h3 {
+        font-size: 36px;
+        font-weight: 400;
+        white-space: pre-line;
     }
 
     p {
@@ -35,11 +54,18 @@ body {
         }
 
         .red {
-            color: #FF7474;
+            color: #ff7474;
         }
 
         .indigo {
-            color: #6574CD;
+            color: #6574cd;
+        }
+
+        .red-gradient {
+            background: linear-gradient(90deg, rgb(230, 230, 230) 10%, rgb(255, 0, 0) 70%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
         }
     }
 
@@ -92,9 +118,7 @@ body {
 
 .breathe {
     font-weight: 100;
-    font-variation-settings:
-        "wght" 100,
-        "wdth" 85;
+    font-variation-settings: "wght" 100;
 
     .char {
         --delay: calc((var(--char-index) + 1) * 400ms);
@@ -105,61 +129,46 @@ body {
 
 .crush {
     letter-spacing: 5px;
-    font-variation-settings: "wght" 200;
+    font-variation-settings: "SCAN" 0;
     transition: all 200ms ease-in-out;
+    font-family: "Workbench", sans-serif;
+    font-size: $font-size - 5px;
+}
 
-    &__base {
-        font-family: "Orbitron", sans-serif;
-        font-size: $font-size - 5px;
-    }
-    &__neon {
-        font-family: "Sixtyfour", sans-serif;
-        font-size: $font-size - 5px;
-    }
+.font-change {
+    letter-spacing: 5px;
+    font-variation-settings: "SCAN" -20;
+    font-family: "Workbench", sans-serif;
+    font-size: $font-size - 5px;
 }
 
 @keyframes wacky {
     0% {
-        font-variation-settings:
-            "wght" 100,
-            "wdth" 50;
+        font-variation-settings: "wght" 100;
     }
     25% {
-        font-variation-settings:
-            "wght" 100,
-            "wdth" 200;
+        font-variation-settings: "wght" 100;
     }
     50% {
-        font-variation-settings:
-            "wght" 900,
-            "wdth" 200;
+        font-variation-settings: "wght" 900;
     }
     75% {
-        font-variation-settings:
-            "wght" 900,
-            "wdth" 50;
+        font-variation-settings: "wght" 900;
     }
     100% {
-        font-variation-settings:
-            "wght" 100,
-            "wdth" 50;
+        font-variation-settings: "wght" 100;
     }
 }
 
 @keyframes breathe {
     0% {
-        font-variation-settings:
-            "wght" 100,
-            "wdth" 85;
+        font-variation-settings: "wght" 100;
     }
     60% {
-        font-variation-settings:
-            "wght" 900,
-            "wdth" 100;
+        font-variation-settings: "wght" 900;
+        color: #ff0000;
     }
     100% {
-        font-variation-settings:
-            "wght" 100,
-            "wdth" 85;
+        font-variation-settings: "wght" 100;
     }
 }
