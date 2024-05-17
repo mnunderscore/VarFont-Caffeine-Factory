@@ -1,103 +1,100 @@
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Sixtyfour:BLED,SCAN@0..100,-53..100&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Grenze+Gotisch:wght@100..900&family=Orbitron:wght@400..900&family=Sixtyfour:BLED,SCAN@0..100,-53..100&display=swap");
+
+$font-size: 25px;
 
 body {
-    font-family: "Orbitron", sans-serif;
-    font-size: 40px;
-    font-weight: 400;
-    background-color: rgb(7, 7, 7);
-    color: aliceblue;
+    font-family: "Grenze Gotisch", sans-serif;
+    font-size: $font-size;
+    font-weight: 100;
+    background-color: #404040;
+    color: #E6E6E6;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 25px;
+    h2 {
+        font-size: 48px;
+        font-weight: 600;
+        white-space: pre-line;
+    }
+
+    h2:not(:first-of-type) {
+        margin-top: 125px;
+    }
+
+    p {
+        margin: 0;
+        white-space: pre-line;
+        line-height: 1.5;
+
+        .y-gradient {
+            background: linear-gradient(90deg, rgb(255, 251, 0), rgb(255, 174, 0));
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+
+        .red {
+            color: #FF7474;
+        }
+
+        .indigo {
+            color: #6574CD;
+        }
+    }
+
+    span {
+        white-space: pre-line;
+    }
 }
 
-h2{
-    font-size: 48px;
-    font-weight: 600;
+.left-column {
+    width: 40%;
 }
 
-h2:not(:first-of-type) {
-    margin-top: 125px;
-}
-
-p {
-    margin:0;
-    white-space: pre-line;
+.right-column {
+    width: 40%;
 }
 
 .move-on-mouse {
-    font-variation-settings: "wght" 400, "wdth" 100;
+    font-variation-settings:
+        "wght" 400,
+        "wdth" 100;
 }
 
-.more-and-more{
-    font-family: 'Sixtyfour', sans-serif;
-    font-size: 36px;
-    font-weight: 400;
-    font-variation-settings: "SCAN" -50, "BLED" 0;
-
-    & p:nth-child(2) {
-        font-variation-settings: "SCAN" -40;
-    }
-    & p:nth-child(3) {
-        font-variation-settings: "SCAN" -30;
-    }
-    & p:nth-child(4) {
-        font-variation-settings: "SCAN" -20;
-    }
-    & p:nth-child(5) {
-        font-variation-settings: "SCAN" -10;
-    }
-    & p:nth-child(6) {
-        font-variation-settings: "SCAN" 0;
-    }
-    & p:nth-child(7) {
-        font-variation-settings: "SCAN" 10;
-    }
-    & p:nth-child(8) {
-        font-variation-settings: "SCAN" 20;
-    }
-    & p:nth-child(9) {
-        font-variation-settings: "SCAN" 30;
-    }
-}
-.wacky{
-    animation:  wacky infinite;
-    animation-duration: 5s;
+.wacky {
+    animation: wacky infinite;
+    animation-duration: 3s;
     animation-timing-function: ease;
     margin: 0 auto;
-    line-height: 1;
     font-weight: normal;
 
     :nth-child(2) {
-    animation-delay: .1s
+        animation-delay: 0.1s;
     }
 
     :nth-child(3) {
-    animation-delay: .2s
+        animation-delay: 0.2s;
     }
 
     :nth-child(4) {
-    animation-delay: .3s
+        animation-delay: 0.3s;
     }
 
     :nth-child(5) {
-    animation-delay: .4s
+        animation-delay: 0.4s;
     }
 
     :nth-child(6) {
-    animation-delay: .5s
+        animation-delay: 0.5s;
     }
 }
 
-@keyframes wacky  {
-    0%   {font-variation-settings: "wght" 100, "wdth" 50 ; }
-    25%   {font-variation-settings: "wght" 100, "wdth" 200; }
-    50%   {font-variation-settings: "wght" 900, "wdth" 200; }
-    75%   {font-variation-settings: "wght" 900, "wdth" 50;  }
-    100% {font-variation-settings: "wght" 100, "wdth" 50 ;}
-}
-
 .breathe {
-	font-weight: 100;
-	font-size: 40px;
-	font-variation-settings: 'wght' 100, 'wdth' 85;
+    font-weight: 100;
+    font-variation-settings:
+        "wght" 100,
+        "wdth" 85;
 
     .char {
         --delay: calc((var(--char-index) + 1) * 400ms);
@@ -106,17 +103,63 @@ p {
     }
 }
 
+.crush {
+    letter-spacing: 5px;
+    font-variation-settings: "wght" 200;
+    transition: all 200ms ease-in-out;
+
+    &__base {
+        font-family: "Orbitron", sans-serif;
+        font-size: $font-size - 5px;
+    }
+    &__neon {
+        font-family: "Sixtyfour", sans-serif;
+        font-size: $font-size - 5px;
+    }
+}
+
+@keyframes wacky {
+    0% {
+        font-variation-settings:
+            "wght" 100,
+            "wdth" 50;
+    }
+    25% {
+        font-variation-settings:
+            "wght" 100,
+            "wdth" 200;
+    }
+    50% {
+        font-variation-settings:
+            "wght" 900,
+            "wdth" 200;
+    }
+    75% {
+        font-variation-settings:
+            "wght" 900,
+            "wdth" 50;
+    }
+    100% {
+        font-variation-settings:
+            "wght" 100,
+            "wdth" 50;
+    }
+}
+
 @keyframes breathe {
-	0% {
-		font-variation-settings: 'wght' 100, 'wdth' 85;
-		font-size: 40px;
-	}
-	60% {
-		font-variation-settings: 'wght' 700, 'wdth' 100;
-		font-size: 50px;
-	}
-	100% {
-		font-variation-settings: 'wght' 100, 'wdth' 85;
-		font-size: 40px;
-	}
+    0% {
+        font-variation-settings:
+            "wght" 100,
+            "wdth" 85;
+    }
+    60% {
+        font-variation-settings:
+            "wght" 900,
+            "wdth" 100;
+    }
+    100% {
+        font-variation-settings:
+            "wght" 100,
+            "wdth" 85;
+    }
 }
